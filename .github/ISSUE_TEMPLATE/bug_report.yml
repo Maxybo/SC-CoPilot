@@ -1,0 +1,86 @@
+name: Bug report
+description: Report a problem with SC CoPilot
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! The more detail you give, the
+        faster it can be reproduced and fixed.
+  - type: input
+    id: app-version
+    attributes:
+      label: SC CoPilot version
+      description: Shown in the window title bar and under **Settings ▸ Update**.
+      placeholder: "1.14.0"
+    validations:
+      required: true
+  - type: input
+    id: sc-version
+    attributes:
+      label: Star Citizen version
+      description: The game build you were running (e.g. 4.8.0-LIVE).
+      placeholder: "4.8.0-LIVE"
+    validations:
+      required: false
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the app?
+      description: Where did the problem show up?
+      options:
+        - Not sure
+        - Active contracts / cards
+        - Route tab
+        - Cargo planner
+        - Trade / backhaul
+        - Wallet
+        - ReFueling
+        - Locations
+        - Overlay
+        - OCR
+        - Settings / Hotkeys
+        - Updater
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug, and what you expected to happen instead.
+      placeholder: When I …, the app …  I expected it to …
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can someone else make this happen?
+      placeholder: |
+        1. Open …
+        2. Accept a contract / press …
+        3. See …
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log file (optional, but very helpful)
+      description: |
+        Drag-and-drop your log here, or paste the last ~50 lines. It lives at
+        `%APPDATA%\sc-copilot\sc-copilot.log` (and `sc-copilot-crash.log` if the app
+        crashed). Review it first and remove anything you'd rather not share.
+      render: shell
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I'm on the latest version (checked **Settings ▸ Update**)
+          required: false
+        - label: I searched existing issues and this isn't a duplicate
+          required: false

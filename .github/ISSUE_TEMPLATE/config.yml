@@ -1,0 +1,6 @@
+# Force people through the structured forms above (no empty free-form issues).
+blank_issues_enabled: false
+contact_links:
+  - name: Download the latest build
+    url: https://github.com/Maxybo/SC-CoPilot/releases/latest
+    about: Grab the newest SCCoPilot.exe here. Most "it's broken" reports are fixed by updating.

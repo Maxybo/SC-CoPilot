@@ -1,0 +1,52 @@
+name: Feature request
+description: Suggest an idea or improvement for SC CoPilot
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the suggestion! Tell us what you're trying to do and how the app
+        could help.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: What are you trying to do today that's hard, slow, or impossible?
+      placeholder: When hauling …, I have to … because the app doesn't …
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like to see?
+      description: Describe the feature or change you have in mind.
+      placeholder: It would help if …
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the app?
+      options:
+        - General / new idea
+        - Active contracts / cards
+        - Route tab
+        - Cargo planner
+        - Trade / backhaul
+        - Wallet
+        - ReFueling
+        - Locations
+        - Overlay
+        - OCR
+        - Settings / Hotkeys
+        - Updater
+    validations:
+      required: false
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or workarounds
+      description: Anything you've tried, or other ways this could work.
+    validations:
+      required: false
