@@ -1,18 +1,23 @@
 # SC CoPilot
 
-SC CoPilot is a desktop companion for Star Citizen hauling. It reads the game's
-log while you play and keeps track of your cargo contracts — what to pick up,
-where to drop it, how much you're owed, and where you've been. On top of that it
-plans an efficient route between your stops, lays out your ship's cargo bay,
-keeps a running balance, and can show a small overlay on top of the game.
+SC CoPilot is a desktop companion for Star Citizen — a copilot that runs
+alongside the game and handles the busywork while you play. It reads the game's
+log live, so it keeps up with what you're doing without you having to touch it,
+and surfaces what's useful on a second screen or an overlay.
+
+Hauling is its first focus: tracking your cargo contracts, planning an efficient
+route between stops, laying out your ship's cargo bay, and keeping a running
+balance. But it's built to grow into a general Star Citizen copilot — hauling is
+where it started, not where it stops, and more tools are on the way.
 
 It runs entirely on your machine. No account, no launcher, nothing to configure
 to get going.
 
 ## Download
 
-Get the latest `SCCoPilot.exe` from the [Releases page](https://github.com/Maxybo/SC-CoPilot/releases/latest).
-It's a single file — no installer, no dependencies.
+**The first build is being finalised and will be published to the
+[Releases page](https://github.com/Maxybo/SC-CoPilot/releases) shortly.** Once
+it's up you'll download a single `SCCoPilot.exe` — no installer, no dependencies.
 
 The exe isn't code-signed, so Windows SmartScreen may warn you the first time you
 run it. Click "More info", then "Run anyway". That warning is normal for small
@@ -42,7 +47,10 @@ It never reads or writes the game's memory and never attaches to the game
 process, so there's nothing for anti-cheat to object to. It behaves like a
 Discord or OBS overlay.
 
-## What it does
+## What it does today
+
+These are the hauling tools it ships with right now. More areas of the game are
+planned.
 
 ### Contract tracking
 
@@ -174,3 +182,12 @@ For bugs, please include your version (shown in the title bar and under
 Settings > Update). If you can, attach the tail of the log at
 `%APPDATA%\sc-copilot\sc-copilot.log` — it makes problems much easier to track
 down.
+
+## License
+
+SC CoPilot is free to download and use for personal, non-commercial purposes.
+Redistribution, modification, and reverse engineering are not permitted. See
+[LICENSE](LICENSE) for the full terms.
+
+SC CoPilot is an independent project and is not affiliated with, endorsed by, or
+sponsored by Cloud Imperium Games or Roberts Space Industries.
