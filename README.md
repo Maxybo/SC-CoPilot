@@ -26,6 +26,20 @@ independent apps (signing certificates are expensive).
 The app keeps itself up to date: when a new release is out it offers to download
 and install it, and you can check manually under Settings > Update.
 
+### Verify your download
+
+Every release also ships a `SCCoPilot.exe.sha256` file — the SHA-256 checksum of
+that exact build. If you want to confirm your download wasn't corrupted or altered,
+compare it. In PowerShell, from the folder you downloaded into:
+
+```powershell
+Get-FileHash SCCoPilot.exe -Algorithm SHA256
+```
+
+The hash it prints should match the contents of `SCCoPilot.exe.sha256` from the same
+release. The app runs this same check for you automatically whenever it installs an
+update.
+
 ## First run
 
 On launch it finds your `Game.log` automatically, scanning your drives and every
