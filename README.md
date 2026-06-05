@@ -15,9 +15,9 @@ to get going.
 
 ## Download
 
-**The first build is being finalised and will be published to the
-[Releases page](https://github.com/Maxybo/SC-CoPilot/releases) shortly.** Once
-it's up you'll download a single `SCCoPilot.exe` — no installer, no dependencies.
+**The latest build is available now on the
+[Releases page](https://github.com/Maxybo/SC-CoPilot/releases/latest)** — download
+the single `SCCoPilot.exe`. No installer, no dependencies.
 
 The exe isn't code-signed, so Windows SmartScreen may warn you the first time you
 run it. Click "More info", then "Run anyway". That warning is normal for small
