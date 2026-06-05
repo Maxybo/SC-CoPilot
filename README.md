@@ -1,4 +1,4 @@
-# SC CoPilot
+# Star Citizen CoPilot (SC CoPilot)
 
 SC CoPilot is a desktop companion for Star Citizen — a copilot that runs
 alongside the game and handles the busywork while you play. It reads the game's
