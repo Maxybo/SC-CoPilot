@@ -92,6 +92,10 @@ quantum hop is preferred over a long one.
   Recalculate to go back to the optimal route. Skip a stop you can't do (a pickup
   that bugged out, say) and it drops from the route and overlay; restore it from
   the Skipped strip. Mark a stop done by hand if the game didn't detect it.
+- Each stop also shows the station's facilities — its landing-pad sizes and the
+  services it has (refuel, repair, cargo, and more) — and, with online features
+  on, the live Hydrogen (H2) and Quantum Fuel (QF) prices to refuel there, so you
+  can see at a glance where to top up along the way.
 - Below the cards, an orbital map draws your route over the current star system
   from a top-down view, using the real in-game body positions so it matches the
   Starmap. Scroll to zoom, drag to pan.
@@ -118,10 +122,39 @@ automatically as a return load from your last drop-off so you don't fly home
 empty. Each suggestion shows the buy and sell terminals, margin, ROI, distance,
 and the profit for your ship's hold.
 
-This is the only part of the app that uses the internet. Prices are fetched on
-demand and cached for about half an hour; if you're offline it just shows a quiet
-note and everything else keeps working. There's a single checkbox to turn online
-features off entirely. No account or API key is needed.
+The online features — trade and backhaul, fuel prices, and the component prices
+and sellers in the Search tab — are the only part of the app that uses the
+internet, all behind one switch. Prices are fetched on demand and cached for about
+half an hour; if you're offline it just shows a quiet note and everything else
+keeps working. There's a single checkbox to turn online features off entirely. No
+account or API key is needed.
+
+### Search, ship spec and upgrades
+
+The Search tab is a lookup over the whole game, plus a ship-outfitting planner. It
+has three pages:
+
+- **Search** — one box over locations (by name or service, ordered by distance,
+  and optionally only ones your ship's pad fits) and ship components (browse the
+  whole catalogue; pick one to see where it's sold and for how much, nearest
+  first).
+- **Ship spec** — pick any ship, or use the one you're flying to start from its
+  stock loadout, then set the component fitted in each individual slot. Save your
+  loadouts by name and load them back later.
+- **Upgrade planner** — works from your saved spec: every slot shows its current
+  part with an "upgrade to" picker, and the upgrades you choose become a
+  buy-route — the nearest or cheapest seller for each, ordered by travel and drawn
+  on a mini orbital map.
+
+Browsing components and ship slots works offline; the prices, sellers and the
+buy-route use the same optional online features as Trade. Ship loadout data comes
+from the community Star Citizen Wiki and component data from UEX.
+
+### Locations
+
+A searchable catalogue of every station, city and outpost. Filter by landing-pad
+size or the services you need — refuel, repair, cargo, and so on — and see the
+in-game coordinates the app has learned for the places you've visited.
 
 ### Wallet
 
@@ -133,6 +166,11 @@ reconcile again to re-anchor. It shows session and lifetime totals and stays
 entirely local. Re-reading the log on a later launch never double-counts.
 
 ### Refuelling
+
+At the top of the ReFueling tab is the nearest station your current ship can land
+and refuel at from where you are now — pad-aware, so it only suggests one with a
+pad your ship fits, with the distance and, when online, the live H2/QF price
+there. The same line also shows on the overlay, under the game-version chip.
 
 If you run refuelling contracts, the ReFueling tab tracks them alongside your
 hauls — the fuel types and rates involved and the reward. The reward isn't in the
@@ -205,3 +243,4 @@ Redistribution, modification, and reverse engineering are not permitted. See
 
 SC CoPilot is an independent project and is not affiliated with, endorsed by, or
 sponsored by Cloud Imperium Games or Roberts Space Industries.
+
