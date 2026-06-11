@@ -122,6 +122,11 @@ The load-order list tells you what to load first to last and how each load break
 down into crates. If a bundled layout is wrong, you can edit it — add or remove
 bays and doors, set the dimensions, and save your own version per ship.
 
+The bay's colours are yours to change too: a Colours sub-tab lets you restyle
+the fills used for each grouping and the route-trace border, save schemes as
+named profiles, and share them as JSON. Colour-blind presets are included, and
+a reset always takes you back to the default.
+
 ### Trade and backhaul
 
 The Trade tab and a backhaul panel on the Route tab use live market data to
