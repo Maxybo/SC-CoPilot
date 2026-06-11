@@ -222,6 +222,10 @@ thrown away rather than written.
 Run Star Citizen in borderless windowed mode for this (exclusive fullscreen
 captures black), and box the number only, not its label.
 
+The [OCR setup guide](docs/OCR.md) walks through all of it step by step —
+turning it on, adding and positioning each kind of region, triggers, the auto
+wallet update, and troubleshooting.
+
 ### Updates
 
 The app checks for a newer release shortly after launch (there's a toggle to
