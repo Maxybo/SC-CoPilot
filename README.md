@@ -91,7 +91,9 @@ quantum hop is preferred over a long one.
 - Stops show as colour-coded cards. Drag them to set your own order, or hit
   Recalculate to go back to the optimal route. Skip a stop you can't do (a pickup
   that bugged out, say) and it drops from the route and overlay; restore it from
-  the Skipped strip. Mark a stop done by hand if the game didn't detect it.
+  the Skipped strip. Mark a stop done by hand if the game didn't detect it, or
+  push one marked collected back to to-collect if the game or a stray click ran
+  ahead of you.
 - Each stop also shows the station's facilities — its landing-pad sizes and the
   services it has (refuel, repair, cargo, and more) — and, with online features
   on, the live Hydrogen (H2) and Quantum Fuel (QF) prices to refuel there, so you
@@ -107,6 +109,12 @@ cargo you'll carry on the active route and shows where to stack each load so the
 first drop-off sits nearest the door — you unload last-in, first-out with no
 shuffling.
 
+Stacking is adaptive: when the hold has room, each destination's crates stay
+together as one clean block; when space is tight, loads interlock to use every
+cell — the cleaner layout never costs you capacity. And if a load genuinely
+can't be fully stowed in drop order, a banner on the Cargo tab and the overlay
+tells you exactly how much to leave behind for a later trip.
+
 Popular haulers come with a hand-built bay layout; any other ship gets a grid
 generated from its SCU capacity. You can group loads by destination, contract, or
 commodity, pick which door you'll use, and the stacking re-optimises toward it.
@@ -121,6 +129,10 @@ suggest the most profitable cargo to carry — from a terminal you choose, or
 automatically as a return load from your last drop-off so you don't fly home
 empty. Each suggestion shows the buy and sell terminals, margin, ROI, distance,
 and the profit for your ship's hold.
+
+There's also a trade-run finder: point it at where you are now — or anywhere in
+a system — and it searches out the most profitable buy-then-sell runs from
+there, chaining multiple hops when that beats a single run, ranked by profit.
 
 The online features — trade and backhaul, fuel prices, and the component prices
 and sellers in the Search tab — are the only part of the app that uses the
@@ -212,16 +224,17 @@ captures black), and box the number only, not its label.
 
 ### Updates
 
-The app checks for a newer release shortly after launch, at most once a day, and
-lets you know if one's available. Settings > Update shows your current version,
-the latest, when it last checked, and a button to update. When you update, it
-downloads the new build, verifies it, and restarts itself on the new version.
+The app checks for a newer release shortly after launch (there's a toggle to
+turn that off) and lets you know if one's available. Settings > Update shows
+your current version, the latest, when it last checked, and a button to update.
+When you update, it downloads the new build, verifies it, and restarts itself
+on the new version.
 
 ## Where your data lives
 
 Everything is stored under `%APPDATA%\sc-copilot` — your settings, contract
 history, wallet ledger, and learned location names. Nothing leaves your machine
-apart from the optional market lookups and the once-a-day update check.
+apart from the optional market lookups and the on-launch update check.
 
 ## Reporting a bug or requesting a feature
 
