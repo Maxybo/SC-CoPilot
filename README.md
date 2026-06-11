@@ -79,6 +79,10 @@ sometimes shows as raw coordinates. Use the "name" button on the card to give it
 a label — it's saved against those coordinates and reused for any future contract
 at the same spot.
 
+For a contract that delivers to more than one place, each destination shows what
+share of the contract's cargo drops there (60% / 30% / 10%) and the crates that
+make up that portion, so you can see how it splits across stops at a glance.
+
 ### Route planning
 
 The Route tab reorders the stops across your active contracts to cut down travel.
@@ -94,6 +98,10 @@ quantum hop is preferred over a long one.
   the Skipped strip. Mark a stop done by hand if the game didn't detect it, or
   push one marked collected back to to-collect if the game or a stray click ran
   ahead of you.
+- Add your own stop with the "Add stop" button — somewhere to go that isn't a
+  cargo contract (refuel, a bounty, pick up a personal box). Pick a location and
+  it joins the route like any other stop, ordered and distance-measured, but it
+  uses no cargo hold. Mark it visited or remove it any time.
 - Each stop also shows the station's facilities — its landing-pad sizes and the
   services it has (refuel, repair, cargo, and more) — and, with online features
   on, the live Hydrogen (H2) and Quantum Fuel (QF) prices to refuel there, so you
@@ -111,9 +119,18 @@ shuffling.
 
 Stacking is adaptive: when the hold has room, each destination's crates stay
 together as one clean block; when space is tight, loads interlock to use every
-cell — the cleaner layout never costs you capacity. And if a load genuinely
-can't be fully stowed in drop order, a banner on the Cargo tab and the overlay
-tells you exactly how much to leave behind for a later trip.
+cell — the cleaner layout never costs you capacity.
+
+The route and the loading are solved together. When your cargo won't all fit in
+the order your route happened to choose, the planner tries better pickup orders,
+packs each one, and flies the one that stows the most — so the old "can't be
+stowed" cases are almost entirely gone, and it never leaves more behind than the
+routed order would. The search runs in the background, so a big route change
+doesn't freeze the window. You can tune it under Settings > Engine: turn the
+reordering on or off, or set how much extra cargo a reorder has to fit before
+it's worth reshuffling your route. And if a load still genuinely can't be fully
+stowed, a banner on the Cargo tab and the overlay tells you exactly how much to
+leave behind for a later trip.
 
 Popular haulers come with a hand-built bay layout; any other ship gets a grid
 generated from its SCU capacity. You can group loads by destination, contract, or
