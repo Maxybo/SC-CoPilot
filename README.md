@@ -219,6 +219,14 @@ following hops below it, and completed stops collapsed into a summary that
 advances as you go. It's frameless and stays on top, and you can bind a hotkey to
 toggle it (below).
 
+You can also add the cargo bay alongside it — switch on Show cargo layout under
+Settings > Overlay to mirror the current load as a read-only column, so you can see
+how to stack while you load. It locks to the left, under the matching drop-number
+badges, and grows down and to the right; the panel hugs the bay rather than leaving
+empty space beside it; and a Cargo size slider sets how large it is by default (it
+still scales up with the overlay window). Long pickup and destination names wrap to
+the line below instead of stretching the panel out.
+
 ### Global hotkeys
 
 Under Settings > Hotkeys you can bind a shortcut that works even while Star
