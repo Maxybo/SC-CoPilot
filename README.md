@@ -74,14 +74,27 @@ missions move to a history tab that keeps a running total of what you've earned.
 Everything is read live from the log, so the cards update as you accept, deliver,
 and complete contracts in game.
 
+The moment you accept a contract, the card also fills in detail straight from the
+game's own mission data: who's offering it, the expected payout up front (instead
+of "reward pending" until you finish), the commodity, the route class, cargo grade,
+difficulty, time limit, the reputation rank it's offered at and the reputation it
+pays — plus an "illegal" flag on unlawful work. The bundled data is the starting
+point; the live log and, if you use it, OCR confirm or correct it, and anything
+that disagrees is flagged rather than quietly overwritten.
+
 The log names delivery destinations but never names pickup stations, so a pickup
-sometimes shows as raw coordinates. Use the "name" button on the card to give it
-a label — it's saved against those coordinates and reused for any future contract
-at the same spot.
+sometimes shows as raw coordinates. The card now labels it with the region from the
+mission data when it can; you can also use the "name" button to give it a precise
+label — saved against those coordinates and reused for any future contract at the
+same spot.
 
 For a contract that delivers to more than one place, each destination shows what
 share of the contract's cargo drops there (60% / 30% / 10%) and the crates that
 make up that portion, so you can see how it splits across stops at a glance.
+
+The history tab shows profitability per contract — reward, SCU, duration, the
+aUEC-per-SCU and the contract giver — with a text filter to find a run and an
+Export to CSV button for your own bookkeeping.
 
 ### Route planning
 
@@ -159,9 +172,10 @@ there, chaining multiple hops when that beats a single run, ranked by profit.
 The online features — trade and backhaul, fuel prices, and the component prices
 and sellers in the Search tab — are the only part of the app that uses the
 internet, all behind one switch. Prices are fetched on demand and cached for about
-half an hour; if you're offline it just shows a quiet note and everything else
-keeps working. There's a single checkbox to turn online features off entirely. No
-account or API key is needed.
+half an hour, and the Trade tab tells you whether what you're looking at is a fresh
+pull or cached prices. If you're offline it just shows a quiet note and everything
+else keeps working. There's a single checkbox to turn online features off entirely.
+No account or API key is needed.
 
 ### Search, ship spec and upgrades
 
@@ -195,7 +209,8 @@ in-game coordinates the app has learned for the places you've visited.
 The Wallet tab keeps a running aUEC ledger. The game doesn't write your balance
 to the log, so the balance is an estimate: set it once to anchor your current
 in-game balance, and the ledger tracks forward from there — income from mission
-rewards and expenses from shop purchases, both read from the log. If it drifts,
+rewards and commodity-kiosk sales, expenses from shop purchases, all read from the
+log. If it drifts,
 reconcile again to re-anchor. It shows session and lifetime totals and stays
 entirely local. Re-reading the log on a later launch never double-counts.
 
@@ -204,7 +219,9 @@ entirely local. Re-reading the log on a later launch never double-counts.
 At the top of the ReFueling tab is the nearest station your current ship can land
 and refuel at from where you are now — pad-aware, so it only suggests one with a
 pad your ship fits, with the distance and, when online, the live H2/QF price
-there. The same line also shows on the overlay, under the game-version chip.
+there. The same line also shows on the overlay, under the game-version chip. When
+you plot a quantum route, the header also names your projected start location and
+flags a long-haul jump that'll burn more quantum fuel than your recent hops.
 
 If you run refuelling contracts, the ReFueling tab tracks them alongside your
 hauls — the fuel types and rates involved and the reward. The reward isn't in the
@@ -230,7 +247,8 @@ the line below instead of stretching the panel out.
 ### Global hotkeys
 
 Under Settings > Hotkeys you can bind a shortcut that works even while Star
-Citizen has focus — toggling the overlay, for example. Click the field and press
+Citizen has focus — toggle the overlay, mark the next hop done, skip the next stop,
+or trigger an OCR wallet read, all without leaving the game. Click the field and press
 your combo (a modifier plus a key, or a standalone key like F8). It uses a passive
 keyboard hook, the same approach Discord and OBS use, so it needs no admin rights
 and never takes the key away from the game.
