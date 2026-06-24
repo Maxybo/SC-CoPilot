@@ -159,6 +159,14 @@ The load-order list tells you what to load first to last and how each load break
 down into crates. If a bundled layout is wrong, you can edit it — add or remove
 bays and doors, set the dimensions, and save your own version per ship.
 
+The loading rules are yours to set, per ship, on a Loading row: keep each destination
+in its own bay (only sharing a bay when there are more destinations than bays), unload
+last-in first-out, load only through the door, and never move loaded cargo once it's
+aboard. Destinations are kept separate by default, and open-rack ships with no bay doors
+(like the Gatac Railen) automatically relax the unload-order and door rules so the
+separation isn't fighting them. The same toggles are available on the Web Stream Cargo
+view, where you can also pin a whole destination to a bay.
+
 The bay's colours are yours to change too: a Colours sub-tab lets you restyle
 the fills used for each grouping and the route-trace border, save schemes as
 named profiles, and share them as JSON. Colour-blind presets are included, and
@@ -250,6 +258,21 @@ badges, and grows down and to the right; the panel hugs the bay rather than leav
 empty space beside it; and a Cargo size slider sets how large it is by default (it
 still scales up with the overlay window). Long pickup and destination names wrap to
 the line below instead of stretching the panel out.
+
+### Web Stream — a second screen in your browser
+
+Run SC CoPilot on your gaming PC and open it on another device on the same network —
+a tablet propped next to your screen, a phone, a second monitor. Turn it on under
+Settings > Web Stream (it's off by default), open the address it shows in a browser, and
+enter the PIN. The browser mirrors the app in the same look, with views for your
+overview, contracts, route, cargo, refuelling, wallet, history, trade, search and ship
+spec, all updating live as you play.
+
+It's interactive, not just a display: Trade and Search run real lookups, you can tick a
+hop complete (or mark it not done), and you can assign which destination loads into each
+cargo bay. Only devices on your own local network can connect, every view is behind the
+PIN, and the connection is unencrypted — so use it on a network you trust, not public
+Wi-Fi, and don't forward its port to the internet.
 
 ### Global hotkeys
 
