@@ -118,6 +118,9 @@ quantum hop is preferred over a long one.
   the Skipped strip. Mark a stop done by hand if the game didn't detect it, or
   push one marked collected back to to-collect if the game or a stray click ran
   ahead of you.
+- Deliveries to the same station are consolidated: if two contracts both drop
+  at the same place, the route visits it once and unloads everything there,
+  instead of splitting it into two hops down the route.
 - Add your own stop with the "Add stop" button — somewhere to go that isn't a
   cargo contract (refuel, a bounty, pick up a personal box). Pick a location and
   it joins the route like any other stop, ordered and distance-measured, but it
@@ -240,8 +243,17 @@ flags a long-haul jump that'll burn more quantum fuel than your recent hops.
 
 If you run refuelling contracts, the ReFueling tab tracks them alongside your
 hauls — the fuel types and rates involved and the reward. The reward isn't in the
-log, so you can enter it by hand or let OCR read it off the contract screen (see
-below) and have it credited to your wallet on completion.
+log, so the tool learns it when your wallet is next reconciled: the ledger
+back-fills it from your History and updates it the moment a wallet read attributes
+the income. You can also enter it by hand, or let OCR read it off the contract
+screen (see below) and have it credited to your wallet on completion. If several
+refuels finish back-to-back between wallet reads, the reward may land on only the
+most recent one — set the others by hand on the tab.
+
+The logged jobs are grouped under collapsible day headers — newest first, each
+with a per-day reward total and the current day open by default — so a long
+session's history stays tidy. The Web Stream ReFueling view shows the same grouped
+ledger.
 
 ### Overlay
 
@@ -270,9 +282,12 @@ spec, all updating live as you play.
 
 It's interactive, not just a display: Trade and Search run real lookups, you can tick a
 hop complete (or mark it not done), and you can assign which destination loads into each
-cargo bay. Only devices on your own local network can connect, every view is behind the
-PIN, and the connection is unencrypted — so use it on a network you trust, not public
-Wi-Fi, and don't forward its port to the internet.
+cargo bay. The ReFueling view shows your detected refuel contracts (demo refuels
+included) and lets you log a refuel job from the browser, the same as on the desktop.
+The Overview shows a card for every active contract — hauling, objective and refuel —
+not just the route hops. Only devices on your own local network can connect, every
+view is behind the PIN, and the connection is unencrypted — so use it on a network you
+trust, not public Wi-Fi, and don't forward its port to the internet.
 
 ### Global hotkeys
 
