@@ -51,8 +51,8 @@ RSI sometimes ships an interim HOTFIX build in a folder alongside LIVE. Under
 Settings > App Mode you can pick which install the tool follows — Live (the
 default) or Hotfix — and it shows the `Game.log` it found for each. Your choice is
 remembered, switching cleanly re-points the tracker at that install, and the
-header shows your current mode next to the game version (highlighted whenever
-you're on anything other than LIVE).
+header shows your current mode (highlighted whenever you're on anything other than
+LIVE), SC CoPilot's own version (an `App v` chip), and the game version.
 
 Start it before or during a session and it picks up contracts as you accept them.
 
